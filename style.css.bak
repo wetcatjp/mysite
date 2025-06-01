@@ -1,0 +1,425 @@
+/* 基本設定 */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FF6B35; /* アクセントカラー オレンジ */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header div:first-child { /* ロゴプレースホルダー */
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #4CAF50; /* アクセントカラー グリーン */
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    color: #333;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #FF6B35;
+    text-decoration: none;
+}
+
+/* ナビゲーションアイテムとサブメニューのスタイル */
+header .nav-item {
+    position: relative; /* サブメニューの基準位置 */
+}
+
+header .submenu {
+    display: none; /* 初期状態では非表示 */
+    position: absolute;
+    top: 100%; /* 親アイテムのすぐ下に表示 */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 0.5rem 0;
+    z-index: 10; /* 他の要素より手前に表示 */
+    min-width: 180px; /* サブメニューの最小幅 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap; /* テキストが折り返さないように */
+}
+
+header .submenu li a:hover {
+    background-color: #f0f0f0;
+}
+
+header div:nth-child(3), /* 電話番号 */
+header div:nth-child(4) { /* 営業時間 */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ヒーローセクション */
+#hero {
+    background-color: #4CAF50; /* アクセントカラー グリーン */
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#hero button {
+    background-color: #FF6B35; /* アクセントカラー オレンジ */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+    background-color: #e05a2f; /* オレンジ 少し暗く */
+}
+
+/* セクション共通スタイル */
+section {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #4CAF50; /* アクセントカラー グリーン */
+}
+
+/* サービス紹介セクション */
+#services .service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* 画面幅が狭い場合に折り返す */
+}
+
+#services .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 300px; /* カードの幅を固定 */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション効果 */
+}
+
+#services .card:hover {
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* 影を濃くする */
+}
+
+#services .card .img-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #e0e0e0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}
+
+/* カレンダーのスタイル */
+#calendar-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    max-width: 400px; /* カレンダーの幅を調整 */
+    margin: 1rem auto; /* 中央揃え */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-header h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+}
+
+.calendar-header button {
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.calendar-header button:hover {
+    background-color: #e05a2f;
+}
+
+.calendar-days, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* セル間の隙間 */
+    text-align: center;
+}
+
+.calendar-days div {
+    font-weight: bold;
+    padding: 0.5rem 0;
+    color: #4CAF50; /* アクセントカラー グリーン */
+}
+
+.calendar-dates .date-cell {
+    padding: 0.75rem 0.25rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-dates .date-cell:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-dates .date-cell.empty {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.calendar-dates .date-cell.today {
+    background-color: #FF6B35; /* アクセントカラー オレンジ */
+    color: white;
+    font-weight: bold;
+    border-color: #e05a2f;
+}
+
+/* ページコンテンツの共通パディング等 */
+.main-content { /* 料金ページなどの主要コンテンツエリア用 */
+    padding: 2rem;
+    max-width: 960px; /* コンテンツの最大幅 */
+    margin: 1rem auto 2rem auto; /* 上下マージンと左右中央揃え */
+    background-color: #fff; /* 背景色 */
+    border-radius: 8px; /* 角丸 */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* 少し濃い影 */
+}
+
+.main-content h2 {
+    margin-bottom: 1.5rem;
+    color: #4CAF50; /* アクセントカラー グリーン */
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main-content ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.main-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.main-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+#services .card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #FF6B35; /* アクセントカラー オレンジ */
+}
+
+#services .card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 店舗情報・アクセスセクション */
+#store-info .map-placeholder {
+    width: 100%;
+    max-width: 600px; /* マップの最大幅 */
+    height: 400px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    margin: 0 auto 1.5rem auto; /* 中央揃えと下マージン */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}
+
+#store-info .info-text p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+#store-info .info-text p strong {
+    color: #333;
+}
+
+/* お問い合わせセクション */
+#contact .contact-methods {
+    text-align: center;
+}
+
+#contact .contact-methods p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+#contact .contact-methods p strong {
+    color: #FF6B35; /* アクセントカラー オレンジ */
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem; /* 他のセクションとの区切り */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 0.5rem;
+    }
+
+    header div:nth-child(3), /* 電話番号 */
+    header div:nth-child(4) { /* 営業時間 */
+        margin-top: 0.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    #services .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .card {
+        width: 90%; /* カード幅を広げる */
+        max-width: 350px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 料金・仕上がり日程セクション */
+#pricing-delivery .content-wrapper {
+    text-align: center;
+}
+
+#pricing-delivery a {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+#pricing-delivery .calendar-placeholder {
+    width: 100%;
+    max-width: 600px; /* カレンダーの最大幅 */
+    height: 400px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    margin: 0 auto; /* 中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}

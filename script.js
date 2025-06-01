@@ -32,6 +32,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hamburger Menu Toggle
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mainNavUl = document.querySelector('nav.global-nav ul');
+
+    if (hamburgerMenu && mainNavUl) {
+        // Set initial ARIA attribute based on current state (nav-active class)
+        const isInitiallyExpanded = mainNavUl.classList.contains('nav-active');
+        hamburgerMenu.setAttribute('aria-expanded', isInitiallyExpanded.toString());
+
+        hamburgerMenu.addEventListener('click', () => {
+            const isExpanded = mainNavUl.classList.toggle('nav-active');
+            hamburgerMenu.setAttribute('aria-expanded', isExpanded.toString());
+
+            // Optional: Change hamburger text/icon on toggle
+            // if (isExpanded) {
+            //     hamburgerMenu.textContent = '✕ CLOSE'; // Or update an inner element
+            // } else {
+            //     hamburgerMenu.textContent = '☰ MENU'; // Or update an inner element
+            // }
+        });
+    }
+
+    /*
     // 仕上がり日程カレンダー機能
     const calendarContainer = document.getElementById('calendar-container');
 
@@ -129,6 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         renderCalendar(currentYear, currentMonth);
     }
-
-    // TODO: サービスカードのインタラクション (ホバーエフェクトなど)
+    */
 });
