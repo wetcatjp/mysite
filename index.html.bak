@@ -3,64 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オゾンクリーニングのきょくとうペリカンズ舞鶴店 | 福岡市中央区・舞鶴のクリーニング</title>
-    <meta name="description" content="福岡市中央区舞鶴のオゾンクリーニングのきょくとうペリカンズ舞鶴店です。衣類・布団・靴のクリーニングはお任せください。高品質な仕上がりと便利なアクセス。">
-    <meta name="keywords" content="福岡 クリーニング, 舞鶴 クリーニング店, 中央区 衣類クリーニング, 天神近く クリーニング, オゾンクリーニング, 布団クリーニング, 靴クリーニング">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "オゾンクリーニングのきょくとうペリカンズ 舞鶴店",
-      "image": "images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "３−８−５−１階",
-        "addressLocality": "舞鶴",
-        "addressRegion": "福岡市中央区",
-        "postalCode": "810-0073",
-        "addressCountry": "JP"
-      },
-      "telephone": "+81-92-761-3964",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Friday"
-          ],
-          "opens": "09:30",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Saturday",
-            "Sunday",
-            "PublicHolidays"
-          ],
-          "opens": "09:30",
-          "closes": "19:00"
-        }
-      ],
-      "priceRange": "¥",
-      "department": [
-        {
-          "@type": "DryCleaningOrLaundry",
-          "name": "衣類クリーニング"
-        },
-        {
-          "@type": "DryCleaningOrLaundry",
-          "name": "布団クリーニング"
-        },
-        {
-          "@type": "DryCleaningOrLaundry",
-          "name": "靴クリーニング"
-        }
-      ]
-    }
-    </script>
+    <title>オゾンクリーニングのきょくとうペリカンズ 舞鶴店 - 福岡市中央区舞鶴のクリーニング</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,9 +13,8 @@
             <p>電話番号: <a href="tel:092-761-3964">092-761-3964</a></p>
         </div>
     </header>
-    <div class="hamburger-menu" aria-expanded="false" aria-controls="main-nav-ul">☰ MENU</div>
     <nav class="global-nav">
-        <ul id="main-nav-ul">
+        <ul>
             <li><a href="#services">サービスメニュー</a></li>
             <li><a href="#pricing">料金表</a></li>
             <li><a href="#info">店舗情報</a></li>
@@ -90,16 +32,15 @@
     </nav>
     <main>
         <nav aria-label="breadcrumb" id="breadcrumbs">
-            <div class="container">
-                <ol>
-                    <li><a href="/">ホーム</a></li>
-                </ol>
-            </div>
+            <ol>
+                <li><a href="/">ホーム</a></li>
+            </ol>
         </nav>
         <section id="hero">
             <h1>オゾンクリーニングのきょくとうペリカンズ 舞鶴店</h1>
             <p>持ち込み型の安心クリーニング</p>
-            <p><a href="https://line.me/R/ti/p/@YOUR_LINE_ID" class="cta-button">LINEでお問い合わせ</a></p>
+            <!-- TODO: 実際のLINEアカウントへのリンクまたはQRコードページへのリンクに置き換えてください -->
+            <p><a href="#" class="cta-button">LINEでお問い合わせ</a></p>
         </section>
 
         <section id="services">
@@ -125,10 +66,11 @@
             <h2>料金表</h2>
             <p>主要なサービスの簡易料金一覧です。詳細は各料金表ページをご確認ください。</p>
             <ul>
-                <li>ワイシャツ（ハンガー仕上げ）: 250円～</li>
-                <li>スーツ上下: 1,800円～</li>
-                <li>羽毛布団シングル: 4,500円～</li>
-                <li>スニーカー: 1,500円～</li>
+                <!-- TODO: XXX円を実際の料金に置き換えてください -->
+                <li>ワイシャツ（ハンガー仕上げ）: XXX円</li>
+                <li>スーツ上下: XXXX円</li>
+                <li>羽毛布団シングル: XXXX円</li>
+                <li>スニーカー: XXXX円</li>
             </ul>
             <p>通常2営業日仕上げ。お急ぎの場合は特急オプション（+330円(税込)で即日・翌日仕上げ）もご利用いただけます。</p>
             <p><em>※当店は持ち込み型のクリーニング店です。宅配サービスは行っておりません。</em></p>
@@ -158,24 +100,16 @@
         <section id="faq">
             <h2>よくある質問</h2>
             <article>
-                <h3>Q. 営業時間は？</h3>
-                <p>A. 平日9:30-20:00、土日祝9:30-19:00です。木曜定休です。</p>
+                <h3>Q. 支払方法は？</h3>
+                <p>A. 現金、クレジットカード（Visa, Mastercard, JCB, AMEX, Diners）、各種キャッシュレス決済（PayPay, LINE Pay, 楽天ペイ, d払い, au PAY, メルペイ）に対応しています。</p>
             </article>
             <article>
-                <h3>Q. 支払い方法は？</h3>
-                <p>A. 現金、クレジットカード各種、キャッシュレス決済（PayPay、LINE Payなど）に対応しています。</p>
+                <h3>Q. 仕上がりまでの時間は？</h3>
+                <p>A. 通常、衣類は2営業日後のお渡しとなります。お急ぎの場合は、特急オプション（追加料金330円(税込)）をご利用いただくことで即日または翌日仕上げが可能です。布団や特殊品については、数日～数週間お時間をいただく場合がございます。</p>
             </article>
             <article>
                 <h3>Q. 駐車場はありますか？</h3>
-                <p>A. 専用駐車場はございません。近隣のコインパーキングをご利用ください。</p>
-            </article>
-            <article>
-                <h3>Q. 仕上がりまでの日数は？</h3>
-                <p>A. 通常2営業日仕上げです。特急オプションもございます。</p>
-            </article>
-            <article>
-                <h3>Q. LINEで問い合わせできますか？</h3>
-                <p>A. はい、可能です。こちらの<a href="https://line.me/R/ti/p/@YOUR_LINE_ID">リンク</a>からお問い合わせください。</p>
+                <p>A. 申し訳ございませんが、専用駐車場はございません。近隣のコインパーキングをご利用ください。</p>
             </article>
         </section>
 
@@ -184,8 +118,10 @@
             <p>ご不明な点がございましたら、お気軽にお問い合わせください。</p>
             <ul>
                 <li>電話: <a href="tel:092-761-3964">092-761-3964</a></li>
-                <li>LINE: <a href="https://line.me/R/ti/p/@YOUR_LINE_ID">LINEでお問い合わせ</a></li>
-                <li>Instagram: <a href="https://www.instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank">Instagramもチェック</a></li>
+                <!-- TODO: 実際のLINEアカウントへのリンクまたはQRコードページへのリンクに置き換えてください -->
+                <li>LINE: <a href="#">LINEでお問い合わせ</a> (友だち追加はこちら)</li>
+                <!-- TODO: 実際のInstagramプロファイルへのリンクに置き換えてください -->
+                <li>Instagram: <a href="#" target="_blank">Instagramもチェック</a> (@your_instagram_handle)</li>
             </ul>
         </section>
     </main>
