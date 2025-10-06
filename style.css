@@ -258,6 +258,31 @@ section h2 {
     border-color: #e05a2f;
 }
 
+.calendar-dates .date-cell.holiday {
+    background-color: #f2f2f2; /* 薄いグレー */
+    color: #aaa;
+    cursor: default;
+    pointer-events: none; /* クリックイベントを無効化 */
+}
+
+#delivery-date-display {
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #e8f5e9; /* 薄い緑 */
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #388e3c; /* 濃い緑 */
+    max-width: 400px;
+    min-height: 2.5em; /* コンテンツがない場合でも高さを確保 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+
 /* ページコンテンツの共通パディング等 */
 .main-content { /* 料金ページなどの主要コンテンツエリア用 */
     padding: 2rem;
